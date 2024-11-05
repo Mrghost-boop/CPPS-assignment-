@@ -1,1 +1,24 @@
+#include <stdio.h>
 
+
+union StudentData {
+    char grade;       
+    int studentID;    
+    float CGPA;      
+};
+
+int main() {
+    union StudentData data;  
+
+
+    data.grade = 'A';
+    printf("Grade: %c\n", data.grade);
+
+    data.studentID = 12345;
+    printf("Student ID: %d\n", data.studentID);
+
+    data.CGPA = 3.85;
+    printf("CGPA: %.2f\n", data.CGPA);
+
+    return 0;
+}
